@@ -75,16 +75,19 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <StepIndicator currentStep={currentStep} totalSteps={TOTAL_STEPS} />
-          <div className="mt-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 sm:p-10 transition-colors duration-300">
-            {renderStep()}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-all duration-500">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzYjgyZjYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzAtOS45NC04LjA2LTE4LTE4LTE4UzAgOC4wNiAwIDE4YzAgNC40MTggMS41ODkgOC40NjggNC4yMjMgMTEuNjAzQzEuNTkgMzIuNTMyIDAgMzYuMTY4IDAgNDBjMCA5Ljk0IDguMDYgMTggMTggMThzMTgtOC4wNiAxOC0xOGMwLTMuODMyLTEuNTktNy40NjgtNC4yMjMtMTAuNjAzQzM0LjQxMSAyNi40NjggMzYgMjIuNDE4IDM2IDE4eiIvPjwvZz48L2c+PC9zdmc+')] opacity-40 dark:opacity-20"></div>
+      <div className="relative z-10">
+        <Header theme={theme} toggleTheme={toggleTheme} />
+        <main className="container mx-auto px-4 py-10">
+          <div className="max-w-5xl mx-auto">
+            <StepIndicator currentStep={currentStep} totalSteps={TOTAL_STEPS} />
+            <div className="mt-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 p-8 sm:p-12 transition-all duration-500 hover:shadow-3xl">
+              {renderStep()}
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
