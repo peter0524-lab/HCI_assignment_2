@@ -1,0 +1,5 @@
+{
+  "name": "AI Grad School Assistant",
+  "description": "An intelligent web service that assists with the entire AI graduate school application process. It automates the creation of CVs, statements of purpose, and contact emails, and recommends suitable professors based on user's academic and career data.",
+  "requestFramePermissions": []
+}
